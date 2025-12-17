@@ -11,7 +11,9 @@ class Factura extends Model
 
     protected $fillable = ['numero','cliente_id','fecha','sub_total','impuesto','total','estado'];
 
-    protected $dates = ['fecha'];
+    protected $casts = [
+        'fecha' => 'date',
+    ];
 
     public function cliente()
     {
