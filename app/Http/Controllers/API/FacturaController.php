@@ -24,7 +24,6 @@ class FacturaController extends Controller
             'sub_total'=>'required|numeric',
             'impuesto'=>'required|numeric',
             'total'=>'required|numeric',
-            'detalle'=>'required|array|min:1',
             'detalle.*.producto_id'=>'required|exists:productos,id',
             'detalle.*.cantidad'=>'required|integer|min:1',
             'detalle.*.precio_unitario'=>'required|numeric',
